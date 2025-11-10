@@ -37,6 +37,8 @@ public class Homescreen {
                 System.out.println("Input error");
 
             }
+
         }
+//todo add a input error loop
     }
 }
