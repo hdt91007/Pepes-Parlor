@@ -2,6 +2,8 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
+import static com.pluralsight.Orderscreen.OpenOrderScreen;
+
 public class Homescreen {
 
     public static void OpenHomescreen() {
@@ -26,7 +28,8 @@ public class Homescreen {
 
             if (choice.equals("1")) {
                 System.out.println("Starting order");
-                OpenHomescreen();
+                OpenOrderScreen(scan);
+                ;
             } else if(choice.equalsIgnoreCase("X"))  {
                 System.out.println("""
                         Thank you for visiting Pepe's Parlor.
