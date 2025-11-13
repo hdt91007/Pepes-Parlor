@@ -1,8 +1,8 @@
-package com.pluralsight;
+package com.pluralsight.UI;
 
 import java.util.Scanner;
 
-import static com.pluralsight.Orderscreen.OpenOrderScreen;
+import static com.pluralsight.UI.Orderscreen.OpenOrderScreen;
 
 public class Homescreen {
 
@@ -12,7 +12,31 @@ public class Homescreen {
                 Welcome to pepe parlor
                 
                 Show General menu here
+
+                Ice cream Flavors
+                - Vanilla
+                - Mint
+                - Cholate
+                - Strawberry
+                - Rocky Road
+                - Lavender
                 
+                
+                Toppings *all star marked toppings will be upcharged
+                - Vanilla
+                - Mint
+                - Cholate
+                - Strawberry
+                - Rocky Road
+                - Lavender
+                
+                
+                Addons
+                - Drinks
+                - Snacks
+                - Food
+                - Bag
+                - collectible
                 
                 """);
         System.out.println(""" 
@@ -34,6 +58,7 @@ public class Homescreen {
                 System.out.println("""
                         Thank you for visiting Pepe's Parlor.
                         Have a nice day!!
+                       
                         """);
                 runtime = false;
             } else {
