@@ -2,18 +2,22 @@ package com.pluralsight.Models;
 
 import java.util.Scanner;
 
-public class Snacks {
+public class Snacks extends Items {
 
+    private double price;
 
-    public static void  DisplayScreen() {
-        Scanner scan = new Scanner(System.in);
+    public Snacks (String name, double price){
+        super(name);
+        this.price = price;
+    }
 
-        System.out.println("""
-                    Menu for the Snack Bar Menu
-                    1. Fries
-                    2. Burger
-                    3. Tender
-                    Enter X when done adding Snacks
-                """);
+    @Override
+    public double CalculatePrice() {
+        return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

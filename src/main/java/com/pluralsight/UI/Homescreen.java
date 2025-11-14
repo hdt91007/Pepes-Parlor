@@ -6,44 +6,22 @@ import static com.pluralsight.UI.Orderscreen.OpenOrderScreen;
 
 public class Homescreen {
 
-    public static void OpenHomescreen() {
+    public static void OpenHomescreen() throws InterruptedException {
         Scanner scan = new Scanner(System.in);
         System.out.println("""
                 Welcome to Pepe's Parlor
-  
-  
-                Ice cream Flavors
-                - Vanilla
-                - Mint
-                - Cholate
-                - Strawberry
-                - Rocky Road
-                - Coffee
-                
-                
-                Toppings *all star marked toppings will be upcharged
-                - Vanilla
-                - Mint
-                - Cholate
-                - Strawberry
-                - Rocky Road
-                - Coffee
-                
-                
-                Addons
-                - Drinks
-                - Snacks
-                - Food
-                - Bag
-                - collectible
-                
-                """);
+                """
+        );
+        Thread.sleep(1000);
+        System.out.println("We serve a variety of Icecream and toppings!!!");
+        Thread.sleep(2000);
+
         System.out.println(""" 
-                Please input 1 when your ready to order
+                Please input 1 when your ready to preview our menu
                 
-                or
+                                    or
                 
-                Input X to Exit
+                              Input X to Exit
                 """);
         boolean runtime = true;
         while (runtime) {
@@ -51,6 +29,8 @@ public class Homescreen {
 
             if (choice.equals("1")) {
                 System.out.println("Starting order");
+                Thread.sleep(500);
+
                 OpenOrderScreen(scan);
                 ;
             } else if(choice.equalsIgnoreCase("X"))  {

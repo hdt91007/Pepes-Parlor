@@ -1,33 +1,23 @@
 package com.pluralsight.Models;
 
-import com.pluralsight.Toppings.Toppings;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.pluralsight.Enums.Size;
 
 public abstract class Items {
-    String name;
-    String size;
-    double price;
-    List<Toppings> toppings = new ArrayList<>();
+    private String name;
 
     public Items(String name) {
         this.name = name;
     }
 
-    public Items() {
-    this.name = "unamed item";
+    public Items(String drinkName, Size size, double finalPrice) {
     }
 
     public String getName() {
         return name;
     }
+public Items(){}
+    public abstract double CalculatePrice();
 
-    public void addTopping(Toppings topping){
-        toppings.add(topping);
-
- }
- public abstract double pricecheck();
 
     public abstract String getDescription();
 

@@ -1,30 +1,33 @@
 package com.pluralsight.Models;
 
-import java.util.Scanner;
+import com.pluralsight.Enums.Size;
+
 
 public class Drinks extends Items{
-    String Name;
-    double Price;
+    private Size size;
+    private String name;
+    private double price;
 
-    public String getName() {
-        return Name;
+    public Drinks (String name, Size size, double price) {
+        super(name);
+        this.size = size;
     }
+
+    public Drinks() {}
+
 
     @Override
-    public double pricecheck() {
-        return price;
+    public double CalculatePrice() {
+        return switch (size) {
+            case SMALL -> 2.99;
+            case MEDIUM -> 3.49;
+            case LARGE -> 4.99;
+        };
     }
 
-    @Override
-    public String getDescription() {
-        return name;
-    }
+        @Override
+        public String getDescription() {
+        return getName() + "(" + size + ")";
 
-
-
-    public Drinks(String name, double price) {
-        super (name);
-        this.price = price;
-
-    }
-}
+        }
+        }
