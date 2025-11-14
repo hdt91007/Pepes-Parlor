@@ -1,16 +1,17 @@
-package com.pluralsight;
+package com.pluralsight.Extra;
 
 public class PremiumTopping {
-String name;
-double price;
-boolean extra;
+    String name;
+    double price;
+    boolean extra;
 
     public PremiumTopping(String name, double price, boolean extra) {
         this.name = name;
         this.price = price;
         this.extra = extra;
     }
-    public PremiumTopping(){};
+
+    public PremiumTopping() {}
 
     public String getName() {
         return name;
@@ -24,22 +25,22 @@ boolean extra;
 
         switch (Size) {
             case "S":
-                if (extra){
+                if (extra) {
                     return 1.5;
-                }else {
+                } else {
                     return 1.0;
                 }
                 //todo dynamic price by .5 value
             case "M":
-                if (extra){
+                if (extra) {
                     return 3;
-                }else {
+                } else {
                     return 2;
                 }
             case "L":
-                if (extra){
+                if (extra) {
                     return 4.50;
-                }else {
+                } else {
                     return 3.0;
                 }
             default:
@@ -49,7 +50,6 @@ boolean extra;
 
         //return price;
         //todo auto adjust Size
-
 
 
     }
@@ -66,6 +66,5 @@ boolean extra;
         this.extra = extra;
     }
 
-
-    //Gold flake, Caviar, Cheesecake,
+    public void addPremiumTopping(String UI) {    }
 }
