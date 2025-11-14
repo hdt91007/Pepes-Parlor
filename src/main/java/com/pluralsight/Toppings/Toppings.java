@@ -1,63 +1,45 @@
 package com.pluralsight.Toppings;
 
+import com.pluralsight.Scoop;
+
 public enum Toppings {
-    gold_flakes("Gold Flakes",4.5 , 1, true),
-    caviar("caviar",5.4, 2,true),
-    cheesecake("Cheesecake",1.0, 3,true),
-    mochi("Mochi",0.5 , 4,true),
-    fresh_wasabi("Fresh Wasabi",2.0, 5,true),
-    bacon("Bacon",3.0, 6,true),
-    chiliCrisp("Chili Crisp",2.0 , 7,true),
-    mangoes("Mangoes ",0.25,8,true),
-    strawberries("Strawberries",0.25, 9,true),
-    raspberries("Raspberries ",0.25 , 10,true),
+    gold_Flakes("Gold Flakes" , true),
+    caviar("Caviar",true),
+    cheesecake("Cheesecake",true),
+    mochi("Mochi",  true),
+    fresh_wasabi("Fresh Wasabi", true),
+    bacon("Bacon", true),
+    chiliCrisp("Chili Crisp", true),
+    mangoes("Mangoes ",true),
+    strawberries("Strawberries", true),
+    raspberries("Raspberries ", true),
 
-    sprinkles("Sprinkles",0, 11, false),
-    mms ("M&Ms",0, 12, false),
-    crackers ("Crackers",0, 13, false),
-    peanuts ("Peanuts",0, 14, false),
-    banana_slices ("Banana Slices",0, 15, false),
-    mint ("Mint", 0 , 16, false),
-    granola("Granola", 0 , 16, false),
-
-
-    ;
-
-
-
-
-//        12. M&M
-//        13. Crackers
-//        14. Oreo Bits
-//        15. Peanuts
-//        16. banana slices
+    sprinkles("Sprinkles",  false),
+    mms ("M&Ms",  false),
+    crackers ("Crackers",  false),
+    peanuts ("Peanuts",  false),
+    banana_slices ("Banana Slices",  false),
+    mint ("Mint",  false),
+    granola("Granola",  false);
 
     private final String name;
-    private final double price;
-    private final double menuNumber ;
-    private final boolean isPremiumTopping;
+    private final boolean isPremium;
 
-    Toppings(String name, double price, double menuNumber, boolean isPremiumTopping) {
+    Toppings(String name, boolean isPremium) {
         this.name = name;
-        this.price = price;
-        this.menuNumber = menuNumber;
-        this.isPremiumTopping = isPremiumTopping;
         //todo debug this
+        this.isPremium = isPremium;
     }
 
-
-    public double getMenuNumber() {
-        return menuNumber;
+    public String getName() {
+        return name;
+    }
+    public boolean isPremium() {
+        return isPremium;
     }
 
-    public boolean isPremiumTopping() {
-        return isPremiumTopping;
+    public double getPrice(Scoop scoop) {
+        if (!isPremium) return 0;
+        return scoop.getPremiumPrice();
     }
-    public double getPrice(){
-        if (isPremiumTopping){
-            return price;}
-        else {
-            return 0;}
     }
-
-}
