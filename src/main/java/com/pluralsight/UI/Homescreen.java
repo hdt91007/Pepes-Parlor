@@ -9,17 +9,16 @@ public class Homescreen {
     public static void OpenHomescreen() {
         Scanner scan = new Scanner(System.in);
         System.out.println("""
-                Welcome to pepe parlor
-                
-                Show General menu here
-
+                Welcome to Pepe's Parlor
+  
+  
                 Ice cream Flavors
                 - Vanilla
                 - Mint
                 - Cholate
                 - Strawberry
                 - Rocky Road
-                - Lavender
+                - Coffee
                 
                 
                 Toppings *all star marked toppings will be upcharged
@@ -28,7 +27,7 @@ public class Homescreen {
                 - Cholate
                 - Strawberry
                 - Rocky Road
-                - Lavender
+                - Coffee
                 
                 
                 Addons
@@ -67,6 +66,5 @@ public class Homescreen {
             }
 
         }
-//todo add a input error loop
     }
 }
